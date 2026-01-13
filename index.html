@@ -7,11 +7,11 @@
 <style>
   /* --- RESET & BASE --- */
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:'Segoe UI',sans-serif; background:black; color:#FFD700; overflow-x:hidden; }
-  a { color:#FFD700; text-decoration:none; }
+  body { font-family:'Segoe UI',sans-serif; background:black; color:#D4AF37; overflow-x:hidden; }
+  a { color:#D4AF37; text-decoration:none; }
   h1,h2,h3 { font-weight:bold; }
-  h1 { font-size:64px; color:#FFC107; animation:bounce 2s infinite; text-align:center; margin-bottom:20px; }
-  p { color:#ddd; font-size:18px; line-height:1.5; }
+  h1 { font-size:64px; color:#D4AF37; animation:bounce 2s infinite; text-align:center; margin-bottom:20px; }
+  p { color:#ddd; font-size:18px; line-height:1.7; }
   button { cursor:pointer; }
 
   @keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);} }
@@ -20,27 +20,27 @@
   @keyframes rotateSlow {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);} }
 
   /* --- NAVIGATION --- */
-  nav { display:flex; justify-content:center; gap:30px; padding:20px 0; position:sticky; top:0; background:black; border-bottom:1px solid #444; z-index:10; }
-  nav button { background:none; border:none; color:#FFD700; font-size:18px; font-weight:bold; transition:color 0.3s, transform 0.2s; }
+  nav { display:flex; justify-content:center; gap:30px; padding:20px 0; position:sticky; top:0; background:black; border-bottom:1px solid #333; z-index:10; }
+  nav button { background:none; border:none; color:#D4AF37; font-size:18px; font-weight:bold; transition:color 0.3s, transform 0.2s; }
   nav button:hover { color:#FFC107; transform:scale(1.1); }
 
   /* --- HERO --- */
-  .hero { text-align:center; padding:120px 20px; background:linear-gradient(to bottom,#000,#111,#000); position:relative; overflow:hidden; }
-  .hero p { max-width:700px; margin:0 auto; font-size:20px; animation:fadeIn 1.5s forwards 0.5s; opacity:0; }
+  .hero { text-align:center; padding:200px 20px; background:linear-gradient(to bottom,#000,#111,#000); position:relative; overflow:hidden; }
+  .hero p { max-width:700px; margin:0 auto; font-size:22px; animation:fadeIn 1.5s forwards 0.5s; opacity:0; }
 
-  .honeycomb { position:absolute; inset:0; display:grid; grid-template-columns:repeat(6,1fr); gap:5px; opacity:0.2; animation:rotateSlow 120s linear infinite; }
-  .honeycomb div { background:#FFD700; transform:rotate(45deg); aspect-ratio:1; border-radius:4px; animation:float 6s ease-in-out infinite; }
+  .honeycomb { position:absolute; inset:0; display:grid; grid-template-columns:repeat(6,1fr); gap:5px; opacity:0.15; animation:rotateSlow 150s linear infinite; }
+  .honeycomb div { background:#D4AF37; transform:rotate(45deg); aspect-ratio:1; border-radius:4px; animation:float 6s ease-in-out infinite; }
   .honeycomb div:nth-child(even){animation-delay:3s;}
 
   /* --- CONTENT SECTIONS --- */
-  .content { max-width:1100px; margin:50px auto; padding:0 20px; opacity:0; transition:opacity 0.5s; }
+  .content { max-width:1100px; margin:80px auto; padding:0 20px; opacity:0; transition:opacity 0.5s; }
   .content.show { opacity:1; }
-  h2 { font-size:42px; color:#FFC107; margin-bottom:25px; text-align:center; }
+  h2 { font-size:42px; color:#D4AF37; margin-bottom:25px; text-align:center; }
 
   /* --- PRODUCTS --- */
   .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:20px; }
-  .product-card { background:#111; padding:25px; border-radius:20px; text-align:center; transition:box-shadow 0.3s, transform 0.3s; cursor:pointer; }
-  .product-card:hover { box-shadow:0 0 40px #FFD700; transform:translateY(-7px); }
+  .product-card { background:#111; padding:30px; border-radius:20px; text-align:center; transition:box-shadow 0.3s, transform 0.3s; cursor:pointer; }
+  .product-card:hover { box-shadow:0 0 40px #D4AF37; transform:translateY(-7px); }
 
   /* --- FAQ --- */
   .faq-item { margin-bottom:15px; border-bottom:1px solid #333; padding-bottom:10px; }
@@ -50,11 +50,11 @@
 
   /* --- CONTACT FORM --- */
   form { display:flex; flex-direction:column; gap:15px; max-width:600px; margin:0 auto; }
-  input, textarea { padding:10px; border-radius:8px; border:none; background:#111; color:#FFD700; }
+  input, textarea { padding:12px; border-radius:8px; border:none; background:#111; color:#D4AF37; }
   input:focus, textarea:focus { outline:2px solid #FFC107; }
 
   /* --- FOOTER --- */
-  footer { text-align:center; padding:40px 0; border-top:1px solid #444; color:#888; font-size:14px; }
+  footer { text-align:center; padding:50px 0; border-top:1px solid #444; color:#888; font-size:14px; }
 
   @media(max-width:600px){h1{font-size:48px;} h2{font-size:32px;}}
 </style>
@@ -73,16 +73,19 @@
 <!-- HERO -->
 <section class="hero content show" id="home">
   <h1>Nectar Lab</h1>
-  <p>Premium, all-natural hydration gummies inspired by honey. Healthy, delicious, energizing.</p>
+  <p>Premium, all-natural hydration gummies inspired by honey. Healthy, delicious, energizing. <br>
+  Our mission is to make hydration fun and tasty while keeping it fully natural. We combine electrolytes, organic fruit flavors, and honey-derived sweetness to power your body efficiently.</p>
   <div class="honeycomb">
-    ${Array(36).fill('<div></div>').join('')}
+    ${Array(48).fill('<div></div>').join('')}
   </div>
 </section>
 
 <!-- ABOUT US -->
 <section class="content" id="about">
   <h2>About Us</h2>
-  <p>Nectar Lab is dedicated to creating the healthiest, tastiest hydration gummies. All our ingredients are natural, packed with electrolytes, and crafted for optimal wellness.</p>
+  <p>At Nectar Lab, we create gummies that not only taste amazing but also support your body's hydration and energy needs. <br>
+  Our research focuses on combining natural ingredients that provide electrolytes, antioxidants, and natural sugars to fuel your daily life. <br>
+  Our team of nutritionists, flavor experts, and designers work together to craft each gummy to perfection. Every product goes through rigorous testing to ensure quality and effectiveness.</p>
 </section>
 
 <!-- PRODUCTS -->
@@ -91,19 +94,23 @@
   <div class="products">
     <div class="product-card">
       <h3>Golden Honey</h3>
-      <p>Honey-inspired gummies with natural electrolytes for energy and hydration.</p>
+      <p>Honey-inspired gummies with natural electrolytes for energy and hydration. Ideal for morning boosts and post-workout recovery.</p>
     </div>
     <div class="product-card">
       <h3>Citrus Burst</h3>
-      <p>Vitamin-packed citrus gummies to refresh and hydrate naturally.</p>
+      <p>Vitamin-packed citrus gummies to refresh and hydrate naturally. Combines vitamin C, potassium, and electrolytes.</p>
     </div>
     <div class="product-card">
       <h3>Berry Boost</h3>
-      <p>Berry-flavored gummies with antioxidants and hydration support.</p>
+      <p>Berry-flavored gummies with antioxidants and hydration support. Great for mid-day energy and focus.</p>
     </div>
     <div class="product-card">
       <h3>Tropical Twist</h3>
-      <p>Exotic fruit gummies for a fun, healthy hydration boost.</p>
+      <p>Exotic fruit gummies for a fun, healthy hydration boost. Perfect for active lifestyles and summer hydration.</p>
+    </div>
+    <div class="product-card">
+      <h3>Energy Blend</h3>
+      <p>A combination of electrolytes and natural caffeine from green tea. Boosts energy and hydration simultaneously.</p>
     </div>
   </div>
 </section>
@@ -111,7 +118,15 @@
 <!-- INGREDIENTS -->
 <section class="content" id="ingredients">
   <h2>Ingredients</h2>
-  <p>We use only the finest natural ingredients: honey extract, natural fruit flavors, organic electrolytes, and zero artificial sweeteners. Healthy and delicious!</p>
+  <p>We use only the finest natural ingredients:</p>
+  <ul>
+    <li>Honey extract for natural sweetness and energy</li>
+    <li>Organic fruit flavors for taste and antioxidants</li>
+    <li>Electrolytes (sodium, potassium, magnesium) for hydration</li>
+    <li>Natural colorings from fruits and plants</li>
+    <li>Zero artificial preservatives or refined sugars</li>
+  </ul>
+  <p>Every ingredient is carefully measured to balance taste, health, and effectiveness.</p>
 </section>
 
 <!-- FAQ -->
@@ -119,26 +134,30 @@
   <h2>FAQ</h2>
   <div class="faq-item">
     <h3 onclick="toggleFAQ(this)">Are the gummies vegan?</h3>
-    <p class="faq-answer">Yes! All Nectar Lab gummies are vegan-friendly.</p>
+    <p class="faq-answer">Yes! All Nectar Lab gummies are vegan-friendly and made with plant-based ingredients.</p>
   </div>
   <div class="faq-item">
     <h3 onclick="toggleFAQ(this)">How many electrolytes are in each gummy?</h3>
-    <p class="faq-answer">Each gummy contains the recommended daily dose for hydration support.</p>
+    <p class="faq-answer">Each gummy contains a balanced amount of electrolytes to aid hydration and energy.</p>
   </div>
   <div class="faq-item">
     <h3 onclick="toggleFAQ(this)">Do they contain sugar?</h3>
-    <p class="faq-answer">Only natural sugars from fruit extracts; no added refined sugar.</p>
+    <p class="faq-answer">Only natural sugars from fruit extracts and honey. No refined sugar added.</p>
+  </div>
+  <div class="faq-item">
+    <h3 onclick="toggleFAQ(this)">Are they safe for children?</h3>
+    <p class="faq-answer">Yes! They are formulated with safe, natural ingredients for all ages, but always check individual dietary needs.</p>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="content" id="contact">
   <h2>Contact</h2>
-  <form onsubmit="alert('Thanks for reaching out!'); return false;">
+  <form onsubmit="alert('Thanks for reaching out! We will get back to you soon.'); return false;">
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Email" required>
     <textarea rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" style="padding:12px; border:none; background:#FFC107; color:black; font-weight:bold; border-radius:8px; cursor:pointer;">Send Message</button>
+    <button type="submit" style="padding:12px; border:none; background:#D4AF37; color:black; font-weight:bold; border-radius:8px; cursor:pointer;">Send Message</button>
   </form>
 </section>
 
@@ -147,7 +166,6 @@
 </footer>
 
 <script>
-  // TAB SWITCHING
   function showTab(tabId) {
     document.querySelectorAll('.content').forEach(c => { c.style.display='none'; c.classList.remove('show'); });
     const tab = document.getElementById(tabId);
@@ -156,13 +174,11 @@
     window.scrollTo({top:0, behavior:'smooth'});
   }
 
-  // FAQ TOGGLE
   function toggleFAQ(el){
     const answer = el.nextElementSibling;
     answer.style.display = answer.style.display==='block' ? 'none' : 'block';
   }
 
-  // INITIAL HOME
   showTab('home');
 </script>
 
