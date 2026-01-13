@@ -4,36 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nectar Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ==================== BASE RESET ==================== */
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Segoe UI',sans-serif; color:#D4AF37; scroll-behavior:smooth;
+body { font-family:'Roboto',sans-serif; color:#EEE; scroll-behavior:smooth; 
        background-color:#000; 
        background-image: repeating-linear-gradient(45deg, #111 0, #111 1px, #000 1px, #000 20px),
                          repeating-linear-gradient(-45deg, #111 0, #111 1px, #000 1px, #000 20px);
        background-size: 40px 40px;
-       }
-a { color:#D4AF37; text-decoration:none; }
-h1,h2,h3 { font-weight:bold; }
-h1 { font-size:64px; color:#D4AF37; text-align:center; margin-bottom:20px; animation:bounce 2s infinite; }
-h2 { font-size:48px; color:#D4AF37; margin-bottom:20px; text-align:center; }
-h3 { color:#FFC107; margin-bottom:10px; }
-p { font-size:18px; line-height:1.8; color:#ddd; margin-bottom:15px; }
+}
+h1,h2,h3 { font-family:'Poppins',sans-serif; font-weight:700; margin-bottom:15px; }
+h1 { font-size:64px; color:#D4AF37; text-align:center; margin-bottom:40px; }
+h2 { font-size:36px; color:#D4AF37; margin-bottom:15px; }
+h3 { color:#FFC107; margin-bottom:8px; }
+p { font-size:18px; line-height:1.8; color:#EEE; margin-bottom:15px; }
 button { cursor:pointer; }
 
 /* ==================== ANIMATIONS ==================== */
-@keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
 @keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
 
 /* ==================== NAVIGATION ==================== */
-nav { display:flex; justify-content:center; gap:30px; padding:20px 0; position:sticky; top:0; background:rgba(0,0,0,0.9); border-bottom:1px solid #333; z-index:10; }
+nav { display:flex; justify-content:center; gap:30px; padding:20px 0; position:sticky; top:0; background:rgba(0,0,0,0.95); border-bottom:1px solid #333; z-index:10; }
 nav button { background:none; border:none; color:#D4AF37; font-size:18px; font-weight:bold; transition:color 0.3s, transform 0.2s; }
-nav button:hover { color:#FFC107; transform:scale(1.1); }
+nav button:hover { color:#FFC107; transform:scale(1.05); }
 
 /* ==================== HOME / HERO ==================== */
-section#home { padding:100px 20px; }
-section#home .home-section { margin:80px 0; text-align:center; max-width:900px; margin-left:auto; margin-right:auto; }
+section#home { padding:120px 20px; }
+section#home .home-section { margin:80px 0; max-width:900px; animation:fadeIn 1s ease-in-out; }
+section#home .home-section-left { text-align:left; margin-left:auto; margin-right:auto; }
 
 /* ==================== FEATURE GRID ==================== */
 .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:50px; margin-top:40px; }
@@ -60,7 +60,7 @@ section.content.show { opacity:1; }
 footer { text-align:center; padding:60px 20px; border-top:1px solid #444; color:#888; font-size:14px; }
 
 /* ==================== RESPONSIVE ==================== */
-@media(max-width:600px){h1{font-size:48px;} h2{font-size:36px;}}
+@media(max-width:600px){h1{font-size:48px;} h2{font-size:28px;} p{font-size:16px;}}
 </style>
 </head>
 <body>
@@ -79,27 +79,26 @@ footer { text-align:center; padding:60px 20px; border-top:1px solid #444; color:
 <section class="content show" id="home">
   <div class="home-section">
     <h1>Welcome to Nectar Lab</h1>
-    <p>Experience hydration like never before. Our all-natural gummies are designed to refresh and energize your body and mind.</p>
   </div>
 
-  <div class="home-section">
+  <div class="home-section home-section-left">
     <h2>Hydration & Energy</h2>
-    <p>Each gummy contains natural electrolytes to help your body stay hydrated throughout the day. Perfect for workouts, long days, or on-the-go energy.</p>
+    <p>Our all-natural gummies deliver essential electrolytes to keep you hydrated and energized. Perfect for workouts, busy days, or on-the-go energy.</p>
   </div>
 
-  <div class="home-section">
-    <h2>Taste You’ll Love</h2>
+  <div class="home-section home-section-left">
+    <h2>Taste That Inspires</h2>
     <p>Delicious honey and fruit flavors make staying hydrated enjoyable. No artificial flavors or refined sugars.</p>
   </div>
 
-  <div class="home-section">
+  <div class="home-section home-section-left">
     <h2>Designed for Life</h2>
-    <p>Whether at the office, school, or gym, Nectar Lab gummies are a healthy and convenient way to stay fueled.</p>
+    <p>Whether at work, school, or on the move, Nectar Lab gummies are a convenient and healthy way to stay fueled naturally.</p>
   </div>
 
-  <div class="home-section">
+  <div class="home-section home-section-left">
     <h2>Join Our Community</h2>
-    <p>Follow our journey, try new flavors, and see how Nectar Lab helps people stay hydrated naturally.</p>
+    <p>Discover new flavors, stay up to date with our journey, and experience hydration made simple, natural, and enjoyable.</p>
   </div>
 </section>
 
